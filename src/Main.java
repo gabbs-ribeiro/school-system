@@ -5,8 +5,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Sistema Escolar");
         Scanner c1 = new Scanner(System.in);
-        Aluno aluno = new Aluno();
-        ArrayList <Aluno> lista = new ArrayList<>();
+        ArrayList<Aluno> lista = new ArrayList<>();
 
         while (true) {
             System.out.println("[ 1 ] Cadastrar Aluno");
@@ -16,6 +15,7 @@ public class Main {
 
             switch (menu) {
                 case 1:
+                    Aluno aluno = new Aluno();
                     aluno.cadastrar();
                     lista.add(new Aluno(aluno.nome, aluno.nota));
                     break;
@@ -25,6 +25,18 @@ public class Main {
                         System.out.println(a); // chama toString() de cada aluno
                     }
                     break;
+
+                case 3:
+                    if (lista.isEmpty()) {
+                        System.out.println("Nenhum aluno cadastrado.");
+                    }
+                    else {
+                    for (Aluno aprovado : lista) {
+                        if (aprovado.nota > 6) {
+                            System.out.println(aprovado);
+                        }
+                        }
+                    }
             }
         }
     }

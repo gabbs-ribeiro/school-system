@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Aluno {
@@ -26,12 +27,6 @@ public class Aluno {
         else {
             System.out.println("Dados invalidos");
             cadastrar();
-        }
-    }
-
-    public void alunosAprovados(){
-        if (nota > 6){
-
         }
     }
 
